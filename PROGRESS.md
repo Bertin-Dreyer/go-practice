@@ -16,6 +16,15 @@
 
 **Mistakes log:** No mistakes today.
 
+## ch3 — Composite Types (tomorrow)
+
+Pending.
+
+## Projects
+
+- [ ] `projects/text-analyzer` — word frequency counter (ch1–3)
+- [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13)
+
 ## Repo
 
 - [x] Git initialized

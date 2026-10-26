@@ -7,8 +7,12 @@ This repo contains my Go practice exercises, organized by chapter, as I work thr
 ## Structure
 
 ```
-ch1/    - Hello World basics
-ch2/    - (coming up)
+ch1/    - Hello World basics (done)
+ch2/    - Types and variables exercises (done)
+ch3/    - Composite types (tomorrow)
+projects/
+  text-analyzer/  - Word frequency counter (planned, ch1–3)
+  todo-app/       - CLI todo manager (planned, ch4–13)
 ```
 
 ## Getting Started
