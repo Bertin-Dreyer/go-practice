@@ -10,4 +10,7 @@ import "fmt"
 // convert to []rune first, then index to get the fourth rune and print it as
 // a character using %c.
 func main() {
+	message := "Hi 👨 and 👩"
+	runes := []rune(message)
+	fmt.Printf("%c\n", runes[3])
 }

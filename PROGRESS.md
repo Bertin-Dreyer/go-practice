@@ -16,9 +16,13 @@
 
 **Mistakes log:** No mistakes today.
 
-## ch3 — Composite Types (tomorrow)
+## ch3 — Composite Types (Learning Go book, Chapter 3)
 
-Pending.
+- [x] `ex1-greetings-slices/main.go` — slice of five greetings, three subslices, all printed
+- [x] `ex2-fourth-rune/main.go` — string with male/female emojis, print fourth rune as character
+- [x] `ex3-employee-struct/main.go` — Employee struct, three instance styles, all printed
+
+**Mistakes log:** No mistakes today.
 
 ## Projects
 
