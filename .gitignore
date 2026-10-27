@@ -1,2 +1,5 @@
 # compiled binaries
 *.exe
+
+# hidden/private books
+books/
