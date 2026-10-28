@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 // TODO: implement the CLI commands: add, list, done, delete
 // TODO: manage a slice of Task in memory
@@ -12,6 +15,21 @@ func main() {
 		{ID: 2, Title: "Walk the dog", Description: "", Done: true, CreatedAt: time.Now()},
 		{ID: 3, Title: "Call mom", Description: "", Done: false, CreatedAt: time.Now()},
 	}
-	_ = tasks
-}
 
+	command := "list"
+
+	switch command {
+	case "list":
+		for _, t := range tasks {
+			if t.Done {
+				fmt.Println(t.Title, "[X]")
+				continue
+			}
+			fmt.Println(t.Title, "[ ]")
+		}
+	case "add":
+		fmt.Println("Adding...")
+	default:
+		fmt.Println("Unknown Command")
+	}
+}
