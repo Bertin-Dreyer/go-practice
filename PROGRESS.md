@@ -32,10 +32,14 @@
 
 **Mistakes log:** No mistakes today.
 
+## ch5 — Next (Learning Go book, Chapter 5)
+
+Pending.
+
 ## Projects
 
-- [ ] `projects/text-analyzer` — word frequency counter (ch1–3)
-- [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13)
+- [x] `projects/text-analyzer` — word frequency counter (reads bible.txt, top 20, gofmt'd)
+- [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13, skeleton done)
 
 ## Repo
 

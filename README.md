@@ -9,16 +9,17 @@ This repo contains my Go practice exercises, organized by chapter, as I work thr
 ```
 ch1/    - Hello World basics (done)
 ch2/    - Types and variables exercises (done)
-ch3/    - Composite types exercises (skeleton, todo)
-ch4/    - Blocks, shadows, control structures exercises (skeleton, todo)
+ch3/    - Composite types exercises (done)
+ch4/    - Blocks, shadows, control structures exercises (done)
+DSA/    - Data structures & algorithms practice (started)
 projects/
-  text-analyzer/  - Word frequency counter (planned, ch1–3)
-  todo-app/       - CLI todo manager (planned, ch4–13)
+  text-analyzer/  - Word frequency counter (done, reads bible.txt, top 20)
+  todo-app/       - CLI todo manager (skeleton, ch4–13)
 ```
 
 ## Getting Started
 
-Each chapter is its own Go module.
+Each chapter and project is its own Go module.
 
 ```bash
 cd ch1
