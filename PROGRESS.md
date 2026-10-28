@@ -32,9 +32,29 @@
 
 **Mistakes log:** No mistakes today.
 
-## ch5 — Next (Learning Go book, Chapter 5)
+## ch5 — Functions (Learning Go book, Chapter 5)
 
-Pending.
+- [ ] `ex1-errors-division/main.go` — math operations return (int, error), div by zero returns error
+- [ ] `ex2-file-len/main.go` — fileLen(filename) (int, error), uses defer to close file
+- [ ] `ex3-prefixer/main.go` — prefixer(string) returns func(string) string
+
+**Mistakes log:** Not started yet.
+
+## ch6 — Pointers (Learning Go book, Chapter 6)
+
+- [ ] `ex1-person-pointers/main.go` — Person struct, MakePerson and MakePersonPointer functions
+- [ ] `ex2-slice-pointers/main.go` — UpdateSlice and GrowSlice functions, print before/after
+- [ ] `ex3-gc-tuning/main.go` — []Person with 10M entries, test GOGC effects
+
+**Mistakes log:** Not started yet.
+
+## ch7 — Types, Methods, and Interfaces (Learning Go book, Chapter 7)
+
+- [ ] `ex1-basketball-league/main.go` — Team and League types
+- [ ] `ex2-league-methods/main.go` — MatchResult and Ranking methods on League
+- [ ] `ex3-ranker-interface/main.go` — Ranker interface and RankPrinter function
+
+**Mistakes log:** Not started yet.
 
 ## Projects
 
