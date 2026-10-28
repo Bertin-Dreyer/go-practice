@@ -3,3 +3,6 @@
 
 # hidden/private books
 books/
+
+# Kilo config
+.kilo/
