@@ -60,6 +60,7 @@
 
 - [x] `projects/text-analyzer` — word frequency counter (reads bible.txt, top 20, gofmt'd)
 - [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13, skeleton done)
+- [ ] `projects/cli-calc` — CLI integer calculator (ch1–5, scaffold done)
 
 ## Repo
 

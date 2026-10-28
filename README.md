@@ -18,6 +18,7 @@ DSA/    - Data structures & algorithms practice (started)
 projects/
   text-analyzer/  - Word frequency counter (done, reads bible.txt, top 20)
   todo-app/       - CLI todo manager (skeleton, ch4–13)
+  cli-calc/       - CLI integer calculator (scaffold, ch1–5)
 ```
 
 ## Getting Started
