@@ -24,6 +24,14 @@
 
 **Mistakes log:** No mistakes today.
 
+## ch4 — Control Structures (Learning Go book, Chapter 4)
+
+- [x] `ex1-random-slice/main.go` — 100 random numbers in [0, 100] into an int slice
+- [x] `ex2-divisibility-rules/main.go` — divisibility by 2, 3, both (Six!), or neither
+- [x] `ex3-total-shadowing/main.go` — variable shadowing with `:=` inside a loop
+
+**Mistakes log:** No mistakes today.
+
 ## Projects
 
 - [ ] `projects/text-analyzer` — word frequency counter (ch1–3)
