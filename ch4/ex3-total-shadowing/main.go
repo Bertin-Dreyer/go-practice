@@ -15,4 +15,14 @@ import "fmt"
 // :=. the outer `total` is never actually modified. after the loop we print
 // the outer total which remains at its initial value.
 func main() {
+	var total int // outer total, stays 0
+
+	for i := 0 ; i < 10 ; i++ {
+		// total := total + i  declares a NEW total scoped to this loop body.
+		// It shadows the outer total; the outer total is never modified.
+		// total += i would instead mutate the outer total in place (no shadowing).
+		total := total + i
+		fmt.Println(total)
+	}
+	fmt.Println(total) // prints 0: the outer total, unchanged
 }
