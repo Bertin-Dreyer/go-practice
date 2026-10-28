@@ -17,19 +17,18 @@ func main() {
 	counts := make(map[string]int)
 
 	for _, word := range words {
-		// Strip non-letter characters (e.g. "town!" -> "town").
-		// strings.Builder avoids O(n^2) string concatenation.
-		var b strings.Builder
-		for _, letter := range word { // letter is a rune
-			if unicode.IsLetter(letter) {
-				b.WriteRune(letter)
-			}
+		// Trim leading/trailing non-letter/non-digit chars (e.g. "town!" -> "town",
+		// "state-of-the-art" stays intact because hyphens are in the middle).
+		word = strings.TrimFunc(word, func(r rune) bool {
+			return !unicode.IsLetter(r) && !unicode.IsDigit(r)
+		})
+		if word == "" {
+			continue
 		}
-		cleaned := b.String()
 
 		// Count the cleaned word. map[string]int zero value is 0,
-		// so counts[cleaned]++ starts at 1 for new words.
-		counts[cleaned]++
+		// so counts[word]++ starts at 1 for new words.
+		counts[word]++
 	}
 
 	// Print each word and its frequency.
