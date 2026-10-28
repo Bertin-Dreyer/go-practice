@@ -2,12 +2,19 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strings"
 	"unicode"
 )
 
 func main() {
-	text := " The quick brown fox jumps over the lazy seal in Cape Town!"
+	data, err := os.ReadFile("sample.txt")
+	if err != nil {
+		fmt.Println("Error reading sample.txt:", err)
+		return
+	}
+
+	text := string(data)
 
 	// Split on whitespace into individual words, all lowercase.
 	// words = ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy",

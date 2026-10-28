@@ -1,0 +1,5 @@
+The quick brown fox jumps over the lazy dog.
+Pack my box with five dozen liquor jugs.
+Hello, world! This is a test of the text analyzer.
+state-of-the-art is a hyphenated word.
+123 numbers count as words too.
