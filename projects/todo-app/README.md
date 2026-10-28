@@ -12,10 +12,10 @@ A command-line todo manager that persists tasks to a JSON file.
 
 ## Planned features
 
-- `add <task>` â€” append a todo
-- `list` â€” print all todos with done/pending status
-- `done <id>` â€” mark a todo complete
-- `delete <id>` â€” remove a todo
+- `add <task>` — append a todo
+- `list` — print all todos with done/pending status
+- `done <id>` — mark a todo complete
+- `delete <id>` — remove a todo
 - Storage: `todos.json` in the working directory
 
 ## Portfolio upgrades (after MVP works)
@@ -28,4 +28,16 @@ A command-line todo manager that persists tasks to a JSON file.
 
 ## Status
 
-Not implemented yet. Build the in-memory version after Ch4â€“Ch6. Add JSON persistence after Ch13.
+Not implemented yet.
+
+## Project structure
+
+```
+todo-app/
++-- go.mod          # module definition
++-- main.go         # CLI entry point (skeleton — fill in)
++-- task.go         # Task struct (skeleton — fill in)
++-- .gitignore      # ignores todos.json
++-- todos.json      # data file (created at runtime, not committed)
+```
+
