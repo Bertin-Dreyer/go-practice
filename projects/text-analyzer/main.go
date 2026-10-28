@@ -3,22 +3,21 @@ package main
 import (
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 	"unicode"
 )
 
 func main() {
-	data, err := os.ReadFile("sample.txt")
+	data, err := os.ReadFile("bible.txt")
 	if err != nil {
-		fmt.Println("Error reading sample.txt:", err)
+		fmt.Println("Error reading bible.txt:", err)
 		return
 	}
 
 	text := string(data)
 
 	// Split on whitespace into individual words, all lowercase.
-	// words = ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy",
-	//          "seal", "in", "cape", "town!"]
 	words := strings.Fields(strings.ToLower(text))
 
 	counts := make(map[string]int)
@@ -38,8 +37,23 @@ func main() {
 		counts[word]++
 	}
 
-	// Print each word and its frequency.
+	var freq []wordCount
+
 	for word, count := range counts {
-		fmt.Println(word, count)
+		freq = append(freq, wordCount{word, count})
 	}
+
+	sort.Slice(freq, func(i, j int) bool {
+		return freq[i].count > freq[j].count
+	})
+
+	// Print each word and its frequency.
+	for i := 0; i < 20 && i < len(freq); i++ {
+		fmt.Println(freq[i].word, freq[i].count)
+	}
+}
+
+type wordCount struct {
+	word  string
+	count int
 }
