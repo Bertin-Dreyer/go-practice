@@ -34,11 +34,11 @@
 
 ## ch5 — Functions (Learning Go book, Chapter 5)
 
-- [ ] `ex1-errors-division/main.go` — math operations return (int, error), div by zero returns error
-- [ ] `ex2-file-len/main.go` — fileLen(filename) (int, error), uses defer to close file
-- [ ] `ex3-prefixer/main.go` — prefixer(string) returns func(string) string
+- [x] `ex1-errors-division/main.go` — math operations return (int, error), div by zero returns error
+- [x] `ex2-file-len/main.go` — fileLen(filename) (int, error), uses defer to close file
+- [x] `ex3-prefixer/main.go` — prefixer(string) returns func(string) string
 
-**Mistakes log:** Not started yet.
+**Mistakes log:** No mistakes today.
 
 ## ch6 — Pointers (Learning Go book, Chapter 6)
 
