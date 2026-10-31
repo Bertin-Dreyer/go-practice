@@ -12,4 +12,13 @@ import "fmt"
 //	fmt.Println(helloPrefix("Bob")) // should print Hello Bob
 //	fmt.Println(helloPrefix("Maria")) // should print Hello Maria
 func main() {
+	helloPrefix := prefixer("Hello")
+	fmt.Println(helloPrefix("Bob"))   // should print Hello Bob
+	fmt.Println(helloPrefix("Maria")) // should print Hello Maria
+}
+
+func prefixer(input string) func(inFunc string) (output string) {
+	return func(s string) string {
+		return input + " " + s
+	}
 }
