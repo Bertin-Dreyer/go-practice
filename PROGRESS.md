@@ -38,7 +38,7 @@
 - [x] `ex2-file-len/main.go` — fileLen(filename) (int, error), uses defer to close file
 - [x] `ex3-prefixer/main.go` — prefixer(string) returns func(string) string
 
-**Mistakes log:** No mistakes today.
+**Mistakes log:** Confused by functions returning other functions (closures) in ex3-prefixer — understood after stepping through signature and return type.
 
 ## ch6 — Pointers (Learning Go book, Chapter 6)
 
