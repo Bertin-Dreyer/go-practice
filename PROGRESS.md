@@ -58,10 +58,12 @@
 
 ## DSA — Data Structures & Algorithms
 
+- [x] `twosum/main.go` — `twoSum(nums []int, target int) []int`, map[int]int one-pass hash map
+- [x] `contains-duplicate/main.go` — `containsDuplicate(nums []int) bool`, map[int]bool set
 - [x] `valid-anagram/main.go` — `isAnagram(s, t string) bool`, map[rune]int frequency count
 - [x] `first-unique-character/main.go` — `firstUniqChar(s string) int`, map[rune]int + second pass over s
 
-**Mistakes log:** Removed `strings.ToLower()` from `firstUniqChar` — it changed the answer by collapsing case (`aA` returned `-1` instead of `0`).
+**Mistakes log:** Removed `strings.ToLower()` from `firstUniqChar` — it changed the answer by collapsing case (`aA` returned `-1` instead of `0`). Then re-added `ToLower` so `'a'` and `'A'` are treated as same character.
 
 ## Projects
 
