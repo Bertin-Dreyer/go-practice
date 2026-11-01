@@ -15,11 +15,11 @@ and error handling — chapters 1–5 of Learning Go.
 
 ```bash
 cd projects/cli-calc
-go run . 6 "*" 3   # prints 18
-go run . 10 / 2    # prints 5
-go run . 7 / 0     # prints "division by zero" to stderr, exits 1
-go run . 7 % 2     # prints "unsupported operator: %" to stderr, exits 1
-go run . abc + 1   # prints parse error to stderr, exits 1
+go run . 6 "*" 3   # 18
+go run . 10 / 2    # 5
+go run . 10 / 0    # division by zero, exits 1
+go run . 7 % 2     # unsupported operator: %, exits 1
+go run . abc + 1   # parse error, exits 1
 ```
 
 > **Note:** Quote `*` in Git Bash (or your shell) so it isn't expanded as a glob.
@@ -33,12 +33,14 @@ Operations live in a `map[string]opFunc`. To add a new operator:
 ## Limits
 
 - Integers only: `7 / 2` gives `3`, not `3.5`.
-- Negative numbers work fine.
+- Negative numbers work fine (`-5 + 3` = `-2`).
+- Integer overflow is not checked — huge results silently wrap around.
 - No floating-point or decimal support.
+- No unit tests yet (table-driven tests come with chapter 15).
 
 ## What it demonstrates (ch1–5)
 
-- **Ch1–2:** variables, constants, basic types, type conversion (`strconv.Atoi`)
+- **Ch1–2:** variables, basic types, type conversion (`strconv.Atoi`)
 - **Ch3:** slices (`os.Args`), maps (`opMap`)
-- **Ch4:** control structures (`if/else`)
+- **Ch4:** control structures (`if` and early `os.Exit`)
 - **Ch5:** functions, multiple returns `(int, error)`, function types (`opFunc`), functions as values in a map
