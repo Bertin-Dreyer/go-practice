@@ -44,11 +44,7 @@ func main() {
 	counts := make(map[string]int)
 
 	for _, word := range words {
-		// Trim leading/trailing non-letter/non-digit chars (e.g. "town!" -> "town",
-		// "state-of-the-art" stays intact because hyphens are in the middle).
-		word = strings.TrimFunc(word, func(r rune) bool {
-			return !unicode.IsLetter(r) && !unicode.IsDigit(r)
-		})
+		word = cleanWord(word)
 		if word == "" {
 			continue
 		}
