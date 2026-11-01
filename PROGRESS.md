@@ -56,11 +56,22 @@
 
 **Mistakes log:** Not started yet.
 
+## DSA — Data Structures & Algorithms
+
+- [x] `valid-anagram/main.go` — `isAnagram(s, t string) bool`, map[rune]int frequency count
+- [x] `first-unique-character/main.go` — `firstUniqChar(s string) int`, map[rune]int + second pass over s
+
+**Mistakes log:** Removed `strings.ToLower()` from `firstUniqChar` — it changed the answer by collapsing case (`aA` returned `-1` instead of `0`).
+
 ## Projects
 
 - [x] `projects/text-analyzer` — word frequency counter (reads any file via -file flag, top N via -top flag, gofmt'd)
 - [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13, skeleton done)
-- [ ] `projects/cli-calc` — CLI integer calculator (ch1–5, scaffold done)
+- [x] `projects/cli-calc` — CLI integer calculator (done, ch1–5)
+
+## Next session (Monday)
+
+First task: Finish `ch6/ex1-person-pointers/main.go` — struct named Person, MakePerson and MakePersonPointer functions, compile with `go build -gcflags="-m"` to see escape analysis.
 
 ## Repo
 
