@@ -35,9 +35,9 @@ that 12912
 
 ```bash
 cd projects/text-analyzer
-go run main.go
-go run main.go -file sample.txt -top 10
-go run main.go -top 5
+go run .
+go run . -file bible.txt -top 10
+go run . -top 5
 ```
 
 Reads `bible.txt` from your current working directory by default. Flags:
