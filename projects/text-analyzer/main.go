@@ -36,23 +36,8 @@ func main() {
 	// Step 4: Convert bytes to string.
 	text := string(data)
 
-	// Step 5: Split on whitespace into individual words, all lowercase.
-	// words = ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy",
-	//          "seal", "in", "cape", "town!"]
-	words := strings.Fields(strings.ToLower(text))
-
-	counts := make(map[string]int)
-
-	for _, word := range words {
-		word = cleanWord(word)
-		if word == "" {
-			continue
-		}
-
-		// Count the cleaned word. map[string]int zero value is 0,
-		// so counts[word]++ starts at 1 for new words.
-		counts[word]++
-	}
+	// Step 5: Count each cleaned, lowercased word.
+	counts := countWords(text)
 
 	var freq []wordCount
 
