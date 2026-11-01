@@ -36,7 +36,13 @@ that 12912
 ```bash
 cd projects/text-analyzer
 go run main.go
+go run main.go -file sample.txt -top 10
+go run main.go -top 5
 ```
 
-Reads `bible.txt` from your current working directory (run from `projects/text-analyzer/`). To analyze a different file, either replace `bible.txt` in this folder or change the filename in `main.go` — command-line args are planned for a later chapter.
+Reads `bible.txt` from your current working directory by default. Flags:
+- `-file` — path to the text file (default: `bible.txt`)
+- `-top` — number of top words to print (default: `20`)
+
+Replace `bible.txt` with any plain-text file, or pass `-file` to point at a different one.
 
