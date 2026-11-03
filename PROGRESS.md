@@ -42,11 +42,11 @@
 
 ## ch6 — Pointers (Learning Go book, Chapter 6)
 
-- [ ] `ex1-person-pointers/main.go` — Person struct, MakePerson and MakePersonPointer functions
-- [ ] `ex2-slice-pointers/main.go` — UpdateSlice and GrowSlice functions, print before/after
-- [ ] `ex3-gc-tuning/main.go` — []Person with 10M entries, test GOGC effects
+- [x] `ex1-person-pointers/main.go` — Person struct, MakePerson and MakePersonPointer functions
+- [x] `ex2-slice-pointers/main.go` — UpdateSlice and GrowSlice functions, print before/after
+- [x] `ex3-gc-tuning/main.go` — []Person with 10M entries, test GOGC effects
 
-**Mistakes log:** Not started yet.
+**Mistakes log:** Initially confused why GrowSlice didn't persist to caller — learned slice headers are copied by value; append reallocation means caller must reassign. GOGC=500 fastest (fewer GCs), GOGC=10 slowest (most GCs).
 
 ## ch7 — Types, Methods, and Interfaces (Learning Go book, Chapter 7)
 
@@ -73,7 +73,7 @@
 
 ## Next session (Monday)
 
-First task: Finish `ch6/ex1-person-pointers/main.go` — struct named Person, MakePerson and MakePersonPointer functions, compile with `go build -gcflags="-m"` to see escape analysis.
+First task: Start `ch7/ex1-basketball-league/main.go` — Team and League types.
 
 ## Repo
 

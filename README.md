@@ -12,7 +12,7 @@ ch2/    - Types and variables exercises (done)
 ch3/    - Composite types exercises (done)
 ch4/    - Blocks, shadows, control structures exercises (done)
 ch5/    - Functions exercises (done)
-ch6/    - Pointers exercises (skeleton, todo)
+ch6/    - Pointers exercises (done)
 ch7/    - Types, methods, interfaces exercises (skeleton, todo)
 DSA/    - Data structures & algorithms (twosum, contains-duplicate, valid-anagram, first-unique-character done)
 projects/
