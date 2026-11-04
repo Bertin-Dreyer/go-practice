@@ -1,6 +1,10 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"slices"
+	"time"
+)
 
 // Task represents a single to-do item.
 type Task struct {
@@ -11,4 +15,22 @@ type Task struct {
 	CreatedAt   time.Time
 }
 
-// TODO: add methods on Task, e.g. MarkDone(), String()
+type TaskList struct {
+	Tasks []Task
+}
+
+// TODO: add methods on Task, e.g. String()
+
+func (t *Task) Complete(){
+	t.Done = true
+}
+
+func (tl *TaskList) Delete(id int) error {
+	for i, t := range tl.Tasks {
+		if t.ID == id {
+			tl.Tasks = slices.Delete(tl.Tasks, i, i+1)
+			return nil
+		}
+	}
+	return fmt.Errorf("task %d not found", id)
+}

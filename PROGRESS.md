@@ -50,11 +50,11 @@
 
 ## ch7 — Types, Methods, and Interfaces (Learning Go book, Chapter 7)
 
-- [ ] `ex1-basketball-league/main.go` — Team and League types
-- [ ] `ex2-league-methods/main.go` — MatchResult and Ranking methods on League
+- [x] `ex1-basketball-league/main.go` — Team and League types, 4 teams populated, printed
+- [x] `ex2-league-methods/main.go` — MatchResult and Ranking methods on League, both working
 - [ ] `ex3-ranker-interface/main.go` — Ranker interface and RankPrinter function
 
-**Mistakes log:** Not started yet.
+**Mistakes log:** Need to check how to do ex2 again with the confusing slices etc.
 
 ## DSA — Data Structures & Algorithms
 
@@ -68,12 +68,12 @@
 ## Projects
 
 - [x] `projects/text-analyzer` — word frequency counter (reads any file via -file flag, top N via -top flag, gofmt'd)
-- [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13, skeleton done)
+- [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13, skeleton done; task.go has Task struct with Complete() and TaskList with Delete(id) methods)
 - [x] `projects/cli-calc` — CLI integer calculator (done, ch1–5)
 
 ## Next session (Monday)
 
-First task: Start `ch7/ex1-basketball-league/main.go` — Team and League types.
+First task: Implement `ch7/ex3-ranker-interface/main.go` — Ranker interface and RankPrinter function. Then continue with todo-app CLI commands (add, list, done, delete).
 
 ## Repo
 

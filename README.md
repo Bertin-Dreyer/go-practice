@@ -13,11 +13,11 @@ ch3/    - Composite types exercises (done)
 ch4/    - Blocks, shadows, control structures exercises (done)
 ch5/    - Functions exercises (done)
 ch6/    - Pointers exercises (done)
-ch7/    - Types, methods, interfaces exercises (skeleton, todo)
+ch7/    - Types, methods, interfaces exercises (ex1, ex2 done; ex3 skeleton)
 DSA/    - Data structures & algorithms (twosum, contains-duplicate, valid-anagram, first-unique-character done)
 projects/
   text-analyzer/  - Word frequency counter (done, reads any file, top N via CLI flags)
-  todo-app/       - CLI todo manager (skeleton, ch4–13)
+  todo-app/       - CLI todo manager (skeleton; task.go has Task struct with Complete() and TaskList.Delete() methods)
   cli-calc/       - CLI integer calculator (done, ch1–5)
 ```
 
