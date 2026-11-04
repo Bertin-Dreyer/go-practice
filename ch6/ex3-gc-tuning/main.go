@@ -61,7 +61,6 @@ func main() {
 //   GOGC=500:           Time taken: 1.1985908s  GC runs: 4   <-- fastest, fewest GCs
 //   GOGC=10:            Time taken: 1.8114521s  GC runs: 30  <-- slowest, most GCs
 //
-// Takeaway: Higher GOGC = GC runs less often = usually faster, but uses more
+//   Takeaway: Higher GOGC = GC runs less often = usually faster, but uses more
 //           memory between collections. Lower GOGC = GC runs more often =
 //           usually slower, but keeps memory lower.
-}

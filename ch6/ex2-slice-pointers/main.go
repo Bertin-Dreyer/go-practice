@@ -20,8 +20,9 @@ func main() {
 	fmt.Println("-------------------")
 
 	// 3. Test GrowSlice - appends a NEW element
+	// The caller must reassign: append may return a new slice header.
 	fmt.Println("Before GrowSlice:", words)
-	GrowSlice(words, "date")
+	words = GrowSlice(words, "date")
 	fmt.Println("After GrowSlice:", words)
 }
 
@@ -34,11 +35,15 @@ func UpdateSlice(slice []string, s string) {
 	fmt.Println("Inside UpdateSlice:", slice)
 }
 
-func GrowSlice(slice []string, s string) {
-	// append may reallocate if capacity is full. When it reallocates, the
-	// local slice header now points to a NEW array. The caller's header still
-	// points to the OLD array, so the caller does NOT see the new element.
-	// That's why you must do: words = GrowSlice(words, "date")
+func GrowSlice(slice []string, s string) []string {
+	// A slice header holds: pointer to array, length, capacity.
+	// When passed to a function, the header is COPIED. Even if append
+	// does NOT reallocate, the caller's header still has the OLD length,
+	// so the caller never sees the appended element. If append DOES
+	// reallocate, the local header points to a new array while the
+	// caller's still points to the old array. Either way, the caller
+	// must reassign: words = GrowSlice(words, "date")
 	slice = append(slice, s)
 	fmt.Println("Inside GrowSlice:", slice)
+	return slice
 }

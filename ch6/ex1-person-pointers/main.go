@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // Exercise 6.1:
 // Create a struct named Person with three fields: FirstName and LastName of
 // type string and Age of type int. Write a function called MakePerson that
@@ -19,12 +21,12 @@ type Person struct {
 func main() {
 	// MakePerson returns a Person VALUE (a copy).
 	p1 := MakePerson("Bertin", "Dreyer", 28)
-	println("MakePerson struct:", p1.FirstName, p1.LastName, p1.Age)
+	fmt.Println("MakePerson struct:", p1.FirstName, p1.LastName, p1.Age)
 
 	// MakePersonPointer returns a *Person POINTER (address of the struct).
 	// Go auto-dereferences when you access fields via p2.FirstName.
 	p2 := MakePersonPointer("Bertin", "Dreyer", 28)
-	println("MakePersonPointer:", p2.FirstName, p2.LastName, p2.Age)
+	fmt.Println("MakePersonPointer:", p2.FirstName, p2.LastName, p2.Age)
 
 	// KEY DIFFERENCE:
 	//   Value  = the whole struct is copied when passed/returned
