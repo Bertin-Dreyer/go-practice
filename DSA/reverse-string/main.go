@@ -19,7 +19,18 @@ import "fmt"
 // Input: s = ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 func reverseString(s []string) {
-	// TODO: implement reverseString
+	start := 0
+	end := len(s) - 1
+
+	for start < end {
+		temp := s[start]
+		s[start] = s[end]
+		s[end] = temp
+
+		start++
+		end--
+	}
+
 }
 
 func main() {
