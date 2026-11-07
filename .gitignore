@@ -4,5 +4,8 @@
 # hidden/private books
 books/
 
+# lesson PDFs and markdown (local study materials only)
+lessons/
+
 # Kilo config
 .kilo/

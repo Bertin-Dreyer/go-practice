@@ -13,7 +13,7 @@ ch3/    - Composite types exercises (done)
 ch4/    - Blocks, shadows, control structures exercises (done)
 ch5/    - Functions exercises (done)
 ch6/    - Pointers exercises (done)
-ch7/    - Types, methods, interfaces exercises (ex1, ex2 done; ex3 skeleton)
+ch7/    - Types, methods, interfaces exercises (done)
 DSA/    - Data structures & algorithms (twosum, contains-duplicate, valid-anagram, first-unique-character done)
 projects/
   text-analyzer/  - Word frequency counter (done, reads any file, top N via CLI flags)

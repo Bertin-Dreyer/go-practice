@@ -52,9 +52,9 @@
 
 - [x] `ex1-basketball-league/main.go` — Team and League types, 4 teams populated, printed
 - [x] `ex2-league-methods/main.go` — MatchResult and Ranking methods on League, both working
-- [ ] `ex3-ranker-interface/main.go` — Ranker interface and RankPrinter function
+- [x] `ex3-ranker-interface/main.go` — Ranker interface, RankPrinter function, called from main with basketballLeague
 
-**Mistakes log:** Need to check how to do ex2 again with the confusing slices etc.
+**Mistakes log:** None for ch7.
 
 ## DSA — Data Structures & Algorithms
 
