@@ -70,12 +70,12 @@
 ## Projects
 
 - [x] `projects/text-analyzer` — word frequency counter (reads any file via -file flag, top N via -top flag, gofmt'd)
-- [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13, skeleton done; task.go has Task struct with Complete() and TaskList with Delete(id) methods)
+- [ ] `projects/todo-app` — CLI todo with JSON storage (ch4–13, skeleton done; task.go has Task struct with Complete(), Complete(id), Delete(id), Add(title), List() methods; main.go has hardcoded command; needs os.Args parsing, JSON persistence, ErrTaskNotFound, tests)
 - [x] `projects/cli-calc` — CLI integer calculator (done, ch1–5)
 
 ## Next session (Monday)
 
-First task: Implement `ch7/ex3-ranker-interface/main.go` — Ranker interface and RankPrinter function. Then continue with todo-app CLI commands (add, list, done, delete).
+First task: Fill in the TODO stubs in `ch8/ex1-double-generic/main.go` (generic Double function). Then continue with todo-app CLI commands (add, list, done, delete via os.Args).
 
 ## Repo
 
