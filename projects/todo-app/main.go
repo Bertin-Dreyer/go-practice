@@ -1,35 +1,32 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
-// TODO: implement the CLI commands: add, list, done, delete
-// TODO: manage a slice of Task in memory
-// TODO: persist to todos.json after Ch13
+import "fmt"
 
 func main() {
-	tasks := []Task{
-		{ID: 1, Title: "Buy milk", Description: "", Done: false, CreatedAt: time.Now()},
-		{ID: 2, Title: "Walk the dog", Description: "", Done: true, CreatedAt: time.Now()},
-		{ID: 3, Title: "Call mom", Description: "", Done: false, CreatedAt: time.Now()},
-	}
+	var list TaskList
+	list.Add("Buy milk")
+	list.Add("Walk the dog")
+	list.Add("Call mom")
 
 	command := "list"
 
 	switch command {
 	case "list":
-		for _, t := range tasks {
-			if t.Done {
-				fmt.Println(t.Title, "[X]")
-				continue
-			}
-			fmt.Println(t.Title, "[ ]")
-		}
+		list.List()
 	case "add":
-		fmt.Println("Adding...")
+		t := list.Add("Pay rent")
+		fmt.Println("added", t.ID)
+	case "done":
+		if err := list.Complete(2); err != nil {
+			fmt.Println(err)
+		}
+		list.List()
+	case "delete":
+		if err := list.Delete(1); err != nil {
+			fmt.Println(err)
+		}
+		list.List()
 	default:
-		fmt.Println("Unknown Command")
+		fmt.Println("unknown command")
 	}
 }
