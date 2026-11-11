@@ -12,19 +12,35 @@ import "fmt"
 //	fmt.Println(total)
 //
 // After the for loop, print out the value of total.
-// what's happening: this demonstrates variable shadowing. inside the loop,
-// `total := total + i` declares a new `total` scoped to the loop body using
-// :=. the outer `total` is never actually modified. after the loop we print
-// the outer total which remains at its initial value.
+//
+// How it works, step by step:
+//  1. We declare an outer variable called total and set it to 0.
+//  2. We write a for loop with i from 0 to 9.
+//  3. Inside the loop, we use total := total + i.
+//     The := creates a NEW total scoped to the loop body.
+//     This shadows the outer total — the outer total is NOT changed.
+//  4. We print the inner total each loop.
+//  5. After the loop ends, we print the outer total again.
+//     It still prints 0 because the outer total was never modified.
+//
+// Difference:
+//
+//	total += i   mutates the outer total (no shadowing).
+//	total := ... creates a new inner total (shadowing).
 func main() {
-	var total int // outer total, stays 0
+	// Step 1: Declare outer total, starts at 0.
+	var total int
 
+	// Step 2: Loop i from 0 to 9.
 	for i := 0; i < 10; i++ {
-		// total := total + i  declares a NEW total scoped to this loop body.
-		// It shadows the outer total; the outer total is never modified.
-		// total += i would instead mutate the outer total in place (no shadowing).
+		// Step 3: Create a new total scoped to this loop body.
+		// It shadows the outer total.
 		total := total + i
+
+		// Step 4: Print the inner total.
 		fmt.Println(total)
 	}
-	fmt.Println(total) // prints 0: the outer total, unchanged
+
+	// Step 5: Print the outer total — still 0.
+	fmt.Println(total)
 }

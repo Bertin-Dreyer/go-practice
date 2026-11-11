@@ -11,26 +11,44 @@ import "fmt"
 //   - third: var declaration, populate fields using dot notation
 //
 // Print out all three structs.
-// what's happening: structs let us group related data into a single type.
-// there are two literal styles (positional vs named) and var declarations.
-// dot notation lets us set fields after declaration.
-type Employee struct {
-	firstName string
-	lastName  string
-	id        int
-}
-
+//
+// How it works, step by step:
+//  1. We define the Employee struct with three fields.
+//  2. We create first using positional literal: Employee{"John", "Doe", 0}.
+//     Field names are not written — order matters.
+//  3. We create second using named literal: Employee{firstName: ..., ...}.
+//     Field names are written — order does not matter.
+//  4. We create third using var declaration: var third Employee, then set
+//     each field with dot notation (third.firstName = ...).
+//  5. We print all three structs.
 func main() {
+	// Step 2: First instance — positional literal, no field names.
 	first := Employee{"John", "Doe", 0}
+
+	// Step 3: Second instance — named literal, field names included.
 	second := Employee{
 		firstName: "Bob",
 		lastName:  "Dylan",
 		id:        1,
 	}
+
+	// Step 4: Third instance — var declaration, then dot notation.
 	third := Employee{}
 	third.firstName = "Jack"
 	third.lastName = "Black"
 	third.id = 2
 
+	// Step 5: Print all three structs.
 	fmt.Println(first, "\n", second, "\n", third)
+}
+
+// Employee holds one person's info.
+//
+//	firstName - person's first name
+//	lastName  - person's last name
+//	id        - person's ID number
+type Employee struct {
+	firstName string
+	lastName  string
+	id        int
 }
